@@ -1,4 +1,4 @@
-package com.example.spring_boot;
+package application;
 
 import org.springframework.stereotype.Component;
 

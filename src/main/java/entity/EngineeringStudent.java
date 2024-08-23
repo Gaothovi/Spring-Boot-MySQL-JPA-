@@ -1,10 +1,10 @@
-package com.example.spring_boot;
+package entity;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="engineeringstudents")
-public class EngineeringStudents {
+public class EngineeringStudent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,10 +26,10 @@ public class EngineeringStudents {
     @Column(name="university_rank")
     private Integer universityRank;
 
-    public EngineeringStudents() {   // constructor used for JPA
+    public EngineeringStudent() {   // constructor used for JPA
     }
 
-    public EngineeringStudents(String department, String firstName, String lastName, Integer passOutYear, Integer universityRank) {
+    public EngineeringStudent(String department, String firstName, String lastName, Integer passOutYear, Integer universityRank) {
         
     	this.department = department;
         this.firstName = firstName;
@@ -88,7 +88,7 @@ public class EngineeringStudents {
 
     @Override
     public String toString() {
-        return "EngineeringStudents[studentId=" + studentId + ", department=" + department + ", firstName=" + firstName + 
+        return "EngineeringStudent[studentId=" + studentId + ", department=" + department + ", firstName=" + firstName + 
                ", lastName=" + lastName + ", passOutYear=" + passOutYear + ", universityRank=" + universityRank + "]";
     }
 }
